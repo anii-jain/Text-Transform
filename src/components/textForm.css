@@ -1,0 +1,16 @@
+.cont {
+    margin-top: 14vh;
+}
+.form-control{
+    margin-top: 4vh;
+    border: 0.5px solid black;
+    border-radius: 3.5px;
+}
+.funct {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.btn{
+    margin-right: 1vw;
+}
