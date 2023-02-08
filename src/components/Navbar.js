@@ -10,7 +10,7 @@ export default function Navbar(props) {
         </a>
 
         
-        <div className= {`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
+        {/* <div className= {`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
           <input
             className="form-check-input"
             type="checkbox"
@@ -21,18 +21,22 @@ export default function Navbar(props) {
           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
             Enable Dark Mode
           </label>
-        </div>
+        </div> */}
+        <div className="left">
+
+          <img src="assets/toogle.png" alt="TOOGLE" className="toogle" onClick={props.toogleMode} />
 
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar"
-        >
-          <span className="navbar-toggler-icon"></span>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+            >
+            <span className="navbar-toggler-icon"></span>
         </button>
+        </div>
         <div
           className={`offcanvas offcanvas-end text-bg-${props.mode}`}
           tabIndex="-1"

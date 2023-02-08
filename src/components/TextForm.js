@@ -2,7 +2,23 @@ import React, { useState } from "react";
 import "./textForm.css";
 
 export default function TextForm(props) {
-  
+
+  const wordCounter = () => {
+    let newText = text.split(/[ ]+/);
+    console.log(newText);
+    let c = 0, total = 0;
+    for (let i = newText.length-1;i>=0;i--){
+      let temp = newText[i].split("\n")
+      for (let j = temp.length;j>=0;j--){
+        if (temp[j]=== '' || temp[j]=== '\n'){
+          ++c;
+        }
+      }
+      total += temp.length;
+    }
+    return (total-c);
+  }
+
   const handleUpClick = () => {
     // console.log("inside button");
     let newText = text.toUpperCase();
@@ -73,7 +89,7 @@ export default function TextForm(props) {
         <h2>Your Text Summary</h2>
         <p>
           {" "}
-          {text.split(" ").length} Words and {text.length} Characters
+          {wordCounter()} Words and {text.length} Characters
         </p>
       </div>
     </div>
