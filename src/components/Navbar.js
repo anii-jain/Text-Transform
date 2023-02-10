@@ -1,15 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./navbar.css";
 
 export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-${props.mode} bg-${props.mode} fixed-top`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           <h4>{props.title}</h4>
-        </a>
+        </Link>
 
-        
         {/* <div className= {`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
           <input
             className="form-check-input"
@@ -23,9 +23,12 @@ export default function Navbar(props) {
           </label>
         </div> */}
         <div className="left">
-
-          <img src="assets/toogle.png" alt="TOOGLE" className="toogle" onClick={props.toogleMode} />
-
+          <img
+            src="assets/toogle.png"
+            alt="TOOGLE"
+            className="toogle"
+            onClick={props.toogleMode}
+          />
 
           <button
             className="navbar-toggler"
@@ -33,9 +36,9 @@ export default function Navbar(props) {
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasDarkNavbar"
             aria-controls="offcanvasDarkNavbar"
-            >
+          >
             <span className="navbar-toggler-icon"></span>
-        </button>
+          </button>
         </div>
         <div
           className={`offcanvas offcanvas-end text-bg-${props.mode}`}
@@ -49,7 +52,9 @@ export default function Navbar(props) {
             </h4>
             <button
               type="button"
-              className={`btn-close btn-close-${props.mode==='light'?'dark':'white'}`}
+              className={`btn-close btn-close-${
+                props.mode === "light" ? "dark" : "white"
+              }`}
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
@@ -57,14 +62,18 @@ export default function Navbar(props) {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
-                  <h5>Home</h5>
-                </a>
+                <Link className="nav-link active" aria-current="page" to="/">
+                  <h5 data-bs-dismiss="offcanvas" aria-label="Close">
+                    Home
+                  </h5>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  <h5>About</h5>
-                </a>
+                <Link className="nav-link" to="/about">
+                  <h5 data-bs-dismiss="offcanvas" aria-label="Close">
+                    About
+                  </h5>
+                </Link>
               </li>
               {/* <li className="nav-item dropdown">
                   <a

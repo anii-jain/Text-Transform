@@ -14,3 +14,6 @@
 .btn{
     margin-right: 1vw;
 }
+.txta::placeholder{
+    color:rgb(102, 99, 99);
+}

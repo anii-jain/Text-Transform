@@ -58,12 +58,12 @@ export default function TextForm(props) {
         <h3 className="text-center">{props.heading}</h3>
         <div className="mb-3">
           <textarea
-            className="form-control"
+            className="form-control txta"
             placeholder="Enter Text Here"
             value={text}
             id="myBox"
             rows="11"
-            style = {{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black', borderWidth: '1px', borderColor: props.mode==='dark'?'white':'black'}}
+            style = {{backgroundColor: props.mode==='dark'?'#212529':'white', color: props.mode==='dark'?'white':'black', borderWidth: '1px', borderColor: props.mode==='dark'?'white':'black'}}
             onChange={handleOnChange}
           ></textarea>
         </div>

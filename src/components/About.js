@@ -1,27 +1,27 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import "./about.css";
 
 export default function About(props) {
-  const [myStyle, setMyStyle] = useState({
-    color: "Black",
-    backgroundColor: "White",
-  });
-  const [myBtn, setmyBtn] = useState("Enable Dark Mode");
-  const toogleColor = () => {
-    if (myStyle.color === "Black") {
-      setMyStyle({
-        color: "White",
-        backgroundColor: "Black",
-      });
-      setmyBtn("Enable Light Mode");
-    } else {
-      setMyStyle({
-        color: "Black",
-        backgroundColor: "White",
-      });
-      setmyBtn("Enable Dark Mode");
-    }
-  };
+  // const [myStyle, setMyStyle] = useState({
+  //   color: "Black",
+  //   backgroundColor: "White",
+  // });
+  // const [myBtn, setmyBtn] = useState("Enable Dark Mode");
+  // const toogleColor = () => {
+  //   if (myStyle.color === "Black") {
+  //     setMyStyle({
+  //       color: "White",
+  //       backgroundColor: "Black",
+  //     });
+  //     setmyBtn("Enable Light Mode");
+  //   } else {
+  //     setMyStyle({
+  //       color: "Black",
+  //       backgroundColor: "White",
+  //     });
+  //     setmyBtn("Enable Dark Mode");
+  //   }
+  // };
 
   return (
     <div className="container cont" style = {{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black', borderWidth: '1px', borderColor: props.mode==='dark'?'white':'black'}}>
