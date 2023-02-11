@@ -107,7 +107,7 @@ export default function Navbar(props) {
                   </ul>
                 </li> */}
             </ul>
-            <form className="searchIt" role="search">
+            {/* <form className="searchIt" role="search">
               <input
                 className="form-control me-2"
                 type="search"
@@ -117,7 +117,7 @@ export default function Navbar(props) {
               <button className="btn btn-success mybtn" type="submit">
                 Search
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </div>
