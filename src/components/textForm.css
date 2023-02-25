@@ -17,3 +17,15 @@
 .txta::placeholder{
     color:rgb(102, 99, 99);
 }
+@media screen and (max-width: 992px) {
+    .funct {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn {
+        width: 80%;
+        margin-top: 0.7vh;
+        margin-bottom: 0.7vh;
+    }
+  }

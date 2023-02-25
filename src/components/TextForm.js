@@ -46,6 +46,12 @@ export default function TextForm(props) {
     setText(newText.join(" "));
   };
 
+  const handleSpeak = () => {
+    let msg = new SpeechSynthesisUtterance();
+    msg.text = text;
+    window.speechSynthesis.speak(msg);
+  }
+
   const handleOnChange = (event) => {
     setText(event.target.value);
   };
@@ -74,14 +80,17 @@ export default function TextForm(props) {
           <button className="btn btn-primary" onClick={handleLoClick}>
             Convert to Lowercase
           </button>
-          <button className="btn btn-primary" onClick={handleClearClick}>
-            Clear Text
+          <button className="btn btn-primary" onClick={handleExtraSpaces}>
+            Remove Extra Spaces
+          </button>
+          <button className="btn btn-primary" onClick={handleSpeak}>
+            Listen Text
           </button>
           <button className="btn btn-primary" onClick={handleCopy}>
             Copy Text
           </button>
-          <button className="btn btn-primary" onClick={handleExtraSpaces}>
-            Remove Extra Spaces
+          <button className="btn btn-primary" onClick={handleClearClick}>
+            Clear Text
           </button>
         </div>
       </div>
